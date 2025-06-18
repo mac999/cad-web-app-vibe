@@ -1,4 +1,4 @@
-# Django 3D CAD Tool
+# Simple 3D CAD Tool for testing vibe coding
 
 A simple 3D CAD tool built with Django and Three.js.
 
@@ -86,5 +86,7 @@ django-cad-tool/
 *   **Import/Export:** Use the "Import JSON" and "Export JSON" buttons to save and load your work.
 
 ## Copyright
+MIT license
 
-&copy; 2025 Your Name
+## Author
+Taewook Kang. 
