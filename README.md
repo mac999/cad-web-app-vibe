@@ -24,7 +24,7 @@ Now, let's develop the front-end. Apply **Bootstrap 4** to the HTML file to conf
 
 In JavaScript, we will implement the following using **Three.js**:
 
-1. **Initialize 3D scene**: Set up camera, renderer, light, scene objects, and add `OrbitControls` to enable canvas manipulation (rotation, zoom, translation).
+1. **Initialize 3D scene**: Set up camera, renderer, light, scene objects, grid, xyz-mark and add `OrbitControls` to enable canvas manipulation (rotation, zoom, translation).
 2. **Initial entity loading**: Call the `/api/entities/` API of the Django backend to load all the saved CAD entity data, and write the logic to **convert each entity type (Line, Arc, Circle, etc.) to a 3D object and render it on the Three.js canvas**. We will need to apply unique parameters for each entity (e.g. start/end point of a line, center/radius of a circle) using the `parameters` field.
 
 Add the ability for users to create CAD entities directly on the canvas.
@@ -49,7 +49,7 @@ Implement the JSON file Import/Export function.
 * Add an 'Export File' button to the left menu panel. * When the 'Export File' button is clicked, **parameter information of all CAD entities** currently rendered on the Three.js canvas is extracted and **POSTed to the Django `/api/export_JSON/` API.**
 * In the Django backend, a JSON file is generated using the **`ezJSON` library** based on the entity data received, and it can be **downloaded to the client as an HTTP response**.
 
-o edit CAD entities on the Three.js canvas.
+Edit CAD entities on the Three.js canvas.
 
 1. **Select Object**: Implement the ability to select 3D entities within the canvas using **Raycasting** when clicking the mouse. The selected entities should be visually highlighted (e.g., change color).
 
@@ -60,7 +60,6 @@ o edit CAD entities on the Three.js canvas.
 * Add a 'Move' button to the left menu panel.
 * After clicking the 'Move' button, if the user selects an entity on the canvas, display the message Click the location to move to in the bottom status panel.
 * Move the selected entity to the second click point in the Three.js scene and send a **PUT or PATCH request** to the Django `/api/entities/{id}/` API to update the changed location information in SQLite.
-
 
 Finally, implement the following additional features.
 
