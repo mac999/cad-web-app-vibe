@@ -9,6 +9,8 @@ A simple 3D CAD tool built with Django and Three.js.
 *   Import and export scenes in JSON format.
 *   Basic user authentication.
 
+<img src="https://github.com/mac999/cad-web-app-vibe/blob/main/img2.png" />
+
 ## Prompt
 Develop a web-based 3D CAD tool using Django, Three.js, Bootstrap, and SQLite stack. First, **set up a Django project** and **define a SQLite database model** to store CAD entity data. The model should be named `CadEntity` and contain the fields `entity_type` (options include Line, Arc, Circle, Cube, Cylinder, Sphere), `name` (optional), and `color` (default #ffffff) that all entities have in common. Design the unique parameters for each entity type to be managed in a JSON field called `parameters` (in a format usable by SQLite). Create an initial migration file as well.
 
@@ -69,6 +71,8 @@ Finally, implement the following additional features.
 * In the Django backend, the SQLite `CadEntity` table is **completely updated (new data is inserted after deleting existing data)** with the received data. This is linked to the `Load` function to preserve the current working state.
 
 Please write considering the following Three.js example (https://github.com/mrdoob/three.js/blob/master/editor/index.html) specifications. 
+
+<img src="https://github.com/mac999/cad-web-app-vibe/blob/main/img1.png"/>
 
 ## Installation
 
