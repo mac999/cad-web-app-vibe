@@ -1,6 +1,6 @@
 # Simple 3D CAD Tool for testing vibe coding
 
-A simple 3D CAD tool built with Django and Three.js.
+A simple 3D CAD tool built with Django and Three.js for testing vibe coding.
 
 ## Features
 
